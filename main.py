@@ -66,8 +66,9 @@ class OxfordPets(keras.utils.Sequence):
         return x,y
 
 
+def get_wave_form_model()
 
-def get_model(img_size, num_classes):
+def get_double_model(img_size, num_classes):
     inputs = keras.Input(shape=(24,24))
     model = keras.Sequential(
         [   inputs,
@@ -101,7 +102,8 @@ train_gen = OxfordPets(
 
 
 # Train the model, doing validation at the end of each epoch.
-epochs = 40
+epochs = 10
 model.fit(train_gen,epochs=epochs)
 
+model.save("model_bleh")
 
