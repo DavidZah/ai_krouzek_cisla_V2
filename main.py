@@ -66,7 +66,6 @@ class OxfordPets(keras.utils.Sequence):
         return x,y
 
 
-def get_wave_form_model()
 
 def get_double_model(img_size, num_classes):
     inputs = keras.Input(shape=(24,24))
@@ -87,7 +86,7 @@ keras.backend.clear_session()
 
 
 # Build model
-model = get_model(img_size, num_classes)
+model = get_double_model(img_size, num_classes)
 model.compile(optimizer=keras.optimizers.Adam(),loss=keras.losses.categorical_crossentropy)
 model.summary()
 
